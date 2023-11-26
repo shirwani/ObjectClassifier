@@ -1,0 +1,9 @@
+scp ~/PycharmProjects/ObjectClassifier/main.py root@23.92.21.39:/var/www/flask-apps/ObjectClassifier/.
+scp ~/PycharmProjects/ObjectClassifier/model.pkl root@23.92.21.39:/var/www/flask-apps/ObjectClassifier/.
+
+scp ~/PycharmProjects/ObjectClassifier/static/js/script.js root@23.92.21.39:/var/www/flask-apps/ObjectClassifier/static/js/.
+scp ~/PycharmProjects/ObjectClassifier/templates/getUserInput.html root@23.92.21.39:/var/www/flask-apps/ObjectClassifier/templates/.
+scp ~/PycharmProjects/ObjectClassifier/templates/showResult.html root@23.92.21.39:/var/www/flask-apps/ObjectClassifier/templates/.
+scp ~/PycharmProjects/ObjectClassifier/templates/imageError.html root@23.92.21.39:/var/www/flask-apps/ObjectClassifier/templates/.
+
+scp ~/PycharmProjects/ObjectClassifier/requirements.txt root@23.92.21.39:/var/www/flask-apps/ObjectClassifier/.

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="static/js/script.js"></script>
+    <title>Object Identification</title>
+    <style>
+        #img_url { width: 500px; }
+        .img_icon { width: 100px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <img class="img_icon" src="{{ icon_img }}">
+            <h1>Is it a cat?</h1>
+            <em>Low accuracy version</em>
+        </div>
+
+        <div class="jumbotron">
+            <em>Copy + paste url below of the object you want to identify:</em>
+            <br/><br/>
+            <input type="text" id="img_url" value="{{ default_img_url }}">
+            <button class="btn btn-primary" onclick="sendContentToApp('{{ default_img_url }}')">Identify</button>
+            <button class="btn btn-warning" onclick="clearContent()">Clear</button>
+            <br/>
+            <div id="result"></div>
+        </div>
+
+        <hr/>
+        <em>Powered by <a href="https://www.linode.com/">Linode</a></em>
+    </div>
+</body>
+</html>
