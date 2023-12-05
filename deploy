@@ -1,3 +1,10 @@
+# Remote site prep
+mkdir -p /var/www/flask-apps/ObjectClassifier
+mkdir -p /var/www/flask-apps/ObjectClassifier/static/js
+mkdir -p /var/www/flask-apps/ObjectClassifier/templates
+mkdir -p /var/www/flask-apps/ObjectClassifier/static/images/.
+
+
 scp ~/PycharmProjects/ObjectClassifier/main.py root@23.92.21.39:/var/www/flask-apps/ObjectClassifier/.
 scp ~/PycharmProjects/ObjectClassifier/model.pkl root@23.92.21.39:/var/www/flask-apps/ObjectClassifier/.
 
@@ -7,3 +14,8 @@ scp ~/PycharmProjects/ObjectClassifier/templates/showResult.html root@23.92.21.3
 scp ~/PycharmProjects/ObjectClassifier/templates/imageError.html root@23.92.21.39:/var/www/flask-apps/ObjectClassifier/templates/.
 
 scp ~/PycharmProjects/ObjectClassifier/requirements.txt root@23.92.21.39:/var/www/flask-apps/ObjectClassifier/.
+
+scp ~/PycharmProjects/ObjectClassifier/static/images/cat-icon2.jpg root@23.92.21.39:/var/www/flask-apps/ObjectClassifier/static/images/.
+scp ~/PycharmProjects/ObjectClassifier/static/images/cat-icon.jpg root@23.92.21.39:/var/www/flask-apps/ObjectClassifier/static/images/.
+scp ~/PycharmProjects/ObjectClassifier/static/images/1000_F_97589769_t45CqXyzjz0KXwoBZT9PRaWGHRk5hQqQ.jpg root@23.92.21.39:/var/www/flask-apps/ObjectClassifier/static/images/.
+

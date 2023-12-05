@@ -9,8 +9,8 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def run():
-    default_img_url = "https://as2.ftcdn.net/v2/jpg/00/97/58/97/1000_F_97589769_t45CqXyzjz0KXwoBZT9PRaWGHRk5hQqQ.jpg"
-    icon_img = "https://debian-us-east-zakishirwani.com.us-east-1.linodeobjects.com/stuff/cats/cat_2831.jpeg"
+    default_img_url = "http://zakishirwani.com/ai/cats/static/images/1000_F_97589769_t45CqXyzjz0KXwoBZT9PRaWGHRk5hQqQ.jpg"
+    icon_img = "http://zakishirwani.com/ai/cats/static/images/cat-icon.jpg"
     return render_template("getUserInput.html", default_img_url=default_img_url, icon_img=icon_img)
 
 
@@ -32,9 +32,9 @@ def identify():
         image = image / 255.
         image = image.reshape((1, num_px * num_px * 3)).T # reshape to column vector
 
-        my_predicted_image = predict(model["w"], model["b"], image)
-        y = str(np.squeeze(my_predicted_image))
-        obj = classes[int(np.squeeze(my_predicted_image)),].decode("utf-8")
+        my_prediction = predict(model["w"], model["b"], image)
+        y = str(np.squeeze(my_prediction))
+        obj = classes[int(np.squeeze(my_prediction)),].decode("utf-8")
         return render_template("showResult.html", prediction=y, obj=obj, img_url=img_url)
     except:
         print("BAD_URL: " + img_url)
